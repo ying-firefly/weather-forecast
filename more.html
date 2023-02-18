@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font/iconfont.css">
+    <link rel="stylesheet" href="./css/more.css">
+    <title>多天预报</title>
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <!-- header 部分 -->
+        <header>
+            <div class="iconfont icon-left" onclick="javaScript:history.go(-1)"></div>
+            <div>多天预报</div>
+            <div class="iconfont icon-refresh"></div>
+        </header>
+
+        <!-- 天气详情  部分 -->
+        <div id="dateList">
+            <ul>
+                <li></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script src="./jquery.js"></script>
+    <script>
+        $('.icon-refresh').click(function() {
+            let list = [];
+            $.get('http://api.tianapi.com/tianqi/index', {
+                        key: 'f5ed06bc7754e8d5439774641f07d788',
+                        city: '广州市'
+                    },
+                    (res, status) => {
+                        if (res.code == 200) {
+                            console.log(res.newslist)
+
+                            for (var i=0; i<7; i++) {
+
+                                $('li').append(res.newslist[i].week);
+                                $('li').append(res.newslist[i].date);
+                                $('li').append(res.newslist[i].weatherimg);
+                                $('li').append(res.newslist[i].weather);
+                                $('li').append(res.newslist[i].highest);
+                                $('li').append(res.newslist[i].lowest);
+                                $('li').append(res.newslist[i].wind);
+                                $('li').append(res.newslist[i].windsc);
+
+                            }
+                        } else {
+                            alert(res.msg)
+                        }
+                    }, 'json'
+                 )
+            console.log(list)
+        })
+    </script>
+    
+</body>
+</html>

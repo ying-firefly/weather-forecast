@@ -1,0 +1,93 @@
+/****************************  wrapper  总容器  ****************************/
+.wrapper {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+
+
+/****************************  header   头部    ****************************/
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    height: 38vw;
+    border-bottom: 0.4vw solid #ddd;
+    background-color: #0ca5df;
+}
+header .title {
+    width: 100%;
+    height: 16vw;
+    font-size: 6vw;
+    line-height: 16vw;
+    display: flex;
+}
+header .title .icon-left {
+    margin: auto 3vw;
+}
+header .bar {
+    width: 100%;
+    height: 10vw;
+}
+header .bar ul {
+    width: 90%;
+    height: 9vw;
+    border: 0.5vw solid #1db6ef;
+    border-radius: 5vw;
+    margin: auto;
+    background-color: #1db6ef;
+    display: flex;
+    align-items: center;
+}
+header .bar ul .icon-search {
+    font-size: 4vw;
+    padding: 2vw 3vw;
+}
+header .bar ul input {
+    width: 62vw;
+    height: 9vw;
+    color: #fff;
+    border-style: none;
+    background-color: #1db6ef;
+    /* 当元素获取焦点时，焦点框为0 */
+    outline: none;
+}
+header .bar ul input::-webkit-input-placeholder {
+    color: #fff;
+}
+header .bar ul .search_btn {
+    width: 12vw;
+    background-color: #2ec7ff;
+    font-size: 4vw;
+    text-align: center;
+    line-height: 10vw;
+    padding: 0 2.5vw;
+    border-radius: 5vw;
+}
+header .rcm {
+    font-size: 2vw;
+    margin: 5vw auto 2vw 4vw;
+}
+
+
+/****************************  推荐城市   部分    ****************************/
+.rcm_list {
+    position: relative;
+    left: 0;
+    top: 38vw;
+    z-index: 1;
+    background-color: #0ca5df;
+}
+#cityList {
+    display: flex;
+    flex-wrap: wrap;
+}
+#cityList li {
+    width: 33vw;
+    height: 13vw;
+    text-align: center;
+    line-height: 13vw;
+    border: 0.1vw solid #ddd;
+}

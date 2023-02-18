@@ -1,0 +1,97 @@
+/****************************  wrapper  总容器  ****************************/
+.wrapper {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background-color: #66bbff;
+}
+
+
+/****************************  header   头部    ****************************/
+header {
+    width: 100%;
+    height: 10vw;
+}
+header .btn {
+    display: flex;
+    justify-content: space-between;
+}
+header .icon-refresh,.icon-more {
+    padding: 4vw;
+}
+header .menu {
+    position: absolute;
+    right: 6vw;
+    width: 30vw;
+    height: 20vw;
+    border: 1vw solid #fff;
+    border-radius: 2vw 2vw 2vw 2vw;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+}
+header .menu ul {
+    width: 26vw;
+    margin: auto 2vw;
+}
+header .menu ul li {
+    height: 10vw;
+    line-height: 10vw;
+}
+header .menu ul li:first-child {
+    border-bottom: 0.1vw solid #aaa;
+}
+
+
+/****************************  主体   部分    ****************************/
+.main {
+    width: 100%;
+    margin: 2vw auto;
+    text-align: center;
+}
+.main .loc {
+    width: 25vw;
+    font-size: 4vw;
+    line-height: 6vw;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+}
+.main #real{
+    font-size: 20vw;
+}
+.range span:last-child::before {
+    content: "/";
+    position: relative;
+    margin: 0 1vw 0 0.5vw;
+}
+.main .state {
+    margin: 1vw auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main #date {
+    margin: 5vw 4vw 2vw;
+    font-size: 1vw;
+    text-align: right;
+}
+
+
+/****************************  天气明细   部分    ****************************/
+.detail {
+    margin-top: 3vw;
+}
+.detail div {
+    width: 95%;
+    margin: 0 1vw;
+    border-top: 0.1vw solid #ddd;
+}
+.detail div .title {
+    height: 6vw;
+    padding: 3vw;
+}
+.detail div ul {
+    font-size: 4vw;
+    padding: 0 0 5vw 10vw;
+}

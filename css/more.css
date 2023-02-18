@@ -1,0 +1,40 @@
+/****************************  wrapper  总容器  ****************************/
+.wrapper {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background-color: #0ca5df;
+}
+
+
+/****************************  header   头部    ****************************/
+header {
+    width: 100%;
+    height: 16vw;
+    font-size: 6vw;
+    line-height: 16vw;
+    border-bottom: 0.4vw solid #ddd;
+    display: flex;
+    justify-content: space-between;
+}
+header .icon-left,.icon-refresh {
+    margin: auto 4vw;
+}
+
+
+/****************************  天气详情   部分    ****************************/
+#dateList {
+    width: 100%;
+    /* 同一行内显示所有文本文字 */
+    white-space: nowrap;
+    /* 如果内容被修剪，则浏览器会显示滚动条以便查看其余的内容 */
+    overflow: auto;
+}
+#dateList ul {
+    /* 指定对象为内联块元素（具有宽度高度，又具有同行特性） */
+    /* display: inline-block; */
+    width: 20vw;
+    height: 50vw;
+    /* white-space: nowrap;
+    overflow: auto; */
+}

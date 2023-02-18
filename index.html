@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="yingFirefly" content="jQuery+AJAX+第三方数据接口 - 天气预报">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font/iconfont.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>天气预报</title>
+</head>
+<body>
+
+    <!-- 总容器 -->
+    <div class="wrapper">
+
+        <!-- header部分 -->
+        <header>
+            <div class="btn">
+                <div class="iconfont icon-refresh"></div>
+                <div class="iconfont icon-more"></div>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li onclick="location.href='city.html'">管理城市</li>
+                    <li onclick="location.href='more.html'">多天预报</li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- 主体部分 -->
+        <div class="main">
+            <div class="loc">
+                <div id="area">广州</div>
+                <div class="iconfont icon-location"></div>
+            </div>
+            <div id="real">20℃</div>
+            <div class="range">
+                <span id="highest">22℃</span>
+                <span id="lowest">14℃</span>
+            </div>
+            <div class="state">
+                <div>
+                    <img id="weatherimg" src="./img/duoyun.png" alt="">
+                </div>
+                <div id="weather" style="margin-left: 1.5vw;">多云</div>
+            </div>
+            <div id="date">2023-02-17</div>
+        </div>
+
+        <!-- 天气明细部分 -->
+        <div class="detail">
+
+            <!-- 降雨预测部分 -->
+            <div class="rain">
+                <div class="title">降雨预测</div>
+                <ul>
+                    <li>降雨量：<span id="pcpn">0.0</span></li>
+                    <li>降雨概率：<span id="pop">0%</span></li>
+                </ul>
+            </div>
+
+            <!-- 舒适度部分 -->
+            <div class="cosy">
+                <div class="title">舒适度</div>
+                <ul>
+                    <li>紫外线指数强度：<span id="uv_index">6</span></li>
+                    <li>能见度（单位：公里）：<span id="vis">25</span></li>
+                    <li>相对湿度：<span id="humidity">61</span></li>
+                    <li>生活指数提示：<span id="tips">天气暖和，适宜着单层面料的短套装、T恤衫、薄牛仔、休闲服、职业套装等春秋过渡装。年老体弱者请适当增减衣服。防护不松懈，出门带口罩。</span></li>
+                </ul>
+            </div>
+
+            <!-- 风向风力部分 -->
+            <div class="wind">
+                <div class="title">风向风力</div>
+                <ul>
+                    <li>风向（方位）：<span id="wind">北风</span></li>
+                    <li>风速（km/h）：<span id="windspeed">3</span></li>
+                    <li>风力：<span id="windsc">1-2级</span></li>
+                </ul>
+            </div>
+
+            <!-- 日出日落部分 -->
+            <div class="sun">
+                <div class="title">日出日落</div>
+                <ul>
+                    <li>日出时间：<span id="sunrise">06:59</span></li>
+                    <li>日落时间：<span id="sunset">18:24</span></li>
+                </ul>
+            </div>
+
+            <!-- 月升月落部分 -->
+            <div class="moon">
+                <div class="title">月升月落</div>
+                <ul>
+                    <li>月升时间：<span id="moonrise">04:15</span></li>
+                    <li>月落时间：<span id="moondown">14:59</span></li>
+                </ul>
+            </div>
+    
+        </div>
+
+    </div>
+
+    <script src="./js/jquery.js"></script>
+    <script src="./js/index.js"></script>
+    
+</body>
+</html>
